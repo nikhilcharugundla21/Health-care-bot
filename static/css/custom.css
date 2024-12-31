@@ -1,0 +1,422 @@
+	body,html{
+			height: 100%;
+			margin: 0;
+			background: #7F7FD5;
+	       background: -webkit-linear-gradient(to right, #73C8A9, #373B44);
+	        background: linear-gradient(to right, #73C8A9, #373B44);
+		}
+
+		.chat{
+			margin-top: auto;
+			margin-bottom: auto;
+			
+		}
+		.card{
+			height: 90%;
+			background-color: rgba(0,0,0,0.4) !important;
+			
+		}
+		.contacts_body{
+			padding:  0.75rem 0 !important;
+			overflow-y: auto;
+			white-space: nowrap;
+		}
+		.msg_card_body{
+			overflow-y: auto;
+			max-height: 450px;
+			min-height: 300px;
+            		background: url(../img/1.png);
+		
+			
+		}
+		
+		.card-header{
+			border-radius: 15px 15px 0 0 !important;
+			border-bottom: 0 !important;
+		}
+	 .card-footer{
+		border-radius: 0 0 15px 15px !important;
+			border-top: 0 !important;
+	}
+		.container{
+			align-content: center;
+		}
+		.search{
+			border-radius: 15px 0 0 15px !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color:white !important;
+		}
+		.search:focus{
+		     box-shadow:none !important;
+           outline:0px !important;
+		}
+		.type_msg{
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color:white !important;
+			height: 60px !important;
+			overflow-y: auto;
+		}
+			.type_msg:focus{
+		     box-shadow:none !important;
+           outline:0px !important;
+		}
+		.attach_btn{
+			border-radius: 15px 0 0 15px !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.send_btn{
+			border-radius: 0 15px 15px 0 !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.search_btn{
+			border-radius: 0 15px 15px 0 !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.contacts{
+			list-style: none;
+			padding: 0;
+		}
+		.contacts li{
+			width: 100% !important;
+			padding: 5px 10px;
+			margin-bottom: 15px !important;
+		}
+	.active{
+			background-color: rgba(0,0,0,0.3);
+	}
+		.user_img{
+			height: 40px;
+			width: 40px;
+			border:1.5px solid #f5f6fa;
+		
+		}
+		.user_img_msg{
+			height: 40px;
+			width: 40px;
+			border:1.5px solid #f5f6fa;
+		
+		}
+	.img_cont{
+			position: relative;
+			height: 40px;
+			width: 40px;
+	}
+	.img_cont_msg{
+			height: 40px;
+			width: 40px;
+	}
+	.online_icon{
+		position: absolute;
+		height: 15px;
+		width:15px;
+		background-color: #4cd137;
+		border-radius: 50%;
+		bottom: 0.2em;
+		right: 0.4em;
+		border:1.5px solid white;
+	}
+	.offline{
+		background-color: #c23616 !important;
+	}
+	.user_info{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 15px;
+	}
+	.user_info span{
+		font-size: 20px;
+		color: white;
+	}
+	.user_info p{
+	font-size: 10px;
+	color: rgba(255,255,255,0.6);
+	}
+	.video_cam{
+		margin-left: 50px;
+		margin-top: 5px;
+	}
+	.video_cam span{
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+		margin-right: 20px;
+	}
+	.msg_cotainer{
+		min-width:45px;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 10px;
+        border-radius: 4px;
+        border-top-right-radius: 1.3em;
+        border-bottom-left-radius: 1.3em;
+        border-bottom-right-radius: 1.3em;
+		background-color: #82ccdd;
+		padding: 12px;
+		position: relative;
+	}
+	.msg_cotainer_send{
+		min-width:45px;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: 10px;
+        border-radius: 4px;
+        border-bottom-left-radius: 1.3em;
+        border-top-left-radius: 1.3em;
+        border-bottom-right-radius: 1.3em;
+		background-color: #78e08f;
+		padding: 12px;
+		position: relative;
+	}
+	.msg_time{
+		position: absolute;
+		left: 0;
+		bottom: -15px;
+		color: rgba(0,0,0,1);
+		font-size: 10px;
+	}
+	.msg_time_send{
+		position: absolute;
+		right:0;
+		bottom: -15px;
+		color: rgba(255,255,255,1);
+		font-weight: 900;
+		font-size: 10x;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+	}
+	.msg_head{
+		position: relative;
+	}
+	#action_menu_btn{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: white;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	.action_menu{
+		z-index: 1;
+		position: absolute;
+		padding: 15px 0;
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		border-radius: 15px;
+		top: 30px;
+		right: 15px;
+		display: none;
+	}
+	.action_menu ul{
+		list-style: none;
+		padding: 0;
+	margin: 0;
+	}
+	.action_menu ul li{
+		width: 100%;
+		padding: 10px 15px;
+		margin-bottom: 5px;
+	}
+	.action_menu ul li i{
+		padding-right: 10px;
+	
+	}
+	.action_menu ul li:hover{
+		cursor: pointer;
+		background-color: rgba(0,0,0,0.2);
+	}
+	@media(max-width: 576px){
+	.contacts_card{
+		margin-bottom: 15px !important;
+	}
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 0;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,.2);
+    }
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,.1);
+    }
+
+    .inputContainter
+    {
+        position: relative;
+        bottom: 0;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .inputMessage
+    {
+        border: 1.2px solid #a9a9a9;
+        bottom: 0;
+        height: 48px;
+        outline: 0;
+        color: #000;
+        -webkit-opacity: 1;
+        width: 83%;
+        padding: 8px;
+        margin-left: 7.2px;
+        border-radius: 50px;
+        box-shadow: 1px 1px 4px grey;
+        padding-left: 20px;
+        font-size: 13pt;
+        margin: 0;
+        border-top: 1px solid #d3d3d3;
+        width: 100%;
+        padding-right: 48px;
+        border-left: 0;
+        border-bottom: 0;
+        border-right: 0;
+    }
+
+    #send-button {
+        background-color: transparent;
+        border: 0;
+        padding: 1px 6px 1px 6px;
+    }
+
+    .sendButton {
+        background-color: #dfd7d4;
+        border-color: #dfd7d4;
+        border-style: solid;
+        border-left-width: 0;
+        border-top-width: 1.2px;
+        border-bottom-width: 1.2px;
+        border-right-width: 1.2px;
+        bottom: 0;
+        height: 48px;
+        outline: 0;
+        position: absolute;
+        right: 0;
+        width: 48px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        cursor: pointer;
+    }
+
+    .sendButton #send_button_icon {
+        font-size: 18pt;
+		padding-right: 8px;
+		/* -webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: #000; */
+		color: #de6262;
+	}
+	
+	.sendButton:disabled #send_button_icon
+	{
+		font-size: 18pt;
+		padding-right: 8px;
+		/* -webkit-text-stroke-width: 0px;
+		-webkit-text-stroke-color: #000; */
+		color: #777;
+	}
+
+    #send_button_icon:before {
+        content: "\f1d8";
+	}
+	
+	.lds-ellipsis {
+		display: inline-block;
+		position: relative;
+		width: 64px;
+		height: 50px;
+	  }
+	  .lds-ellipsis div {
+		position: absolute;
+		top: 20px;
+		left:25px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #fff;
+		animation-timing-function: cubic-bezier(0, 1, 1, 0);
+	  }
+	  .lds-ellipsis div:nth-child(1) {
+		left: 6px;
+		animation: lds-ellipsis1 0.6s infinite;
+	  }
+	  .lds-ellipsis div:nth-child(2) {
+		left: 6px;
+		animation: lds-ellipsis2 0.6s infinite;
+	  }
+	  .lds-ellipsis div:nth-child(3) {
+		left: 26px;
+		animation: lds-ellipsis2 0.6s infinite;
+	  }
+	  .lds-ellipsis div:nth-child(4) {
+		left: 45px;
+		animation: lds-ellipsis3 0.6s infinite;
+	  }
+	  @keyframes lds-ellipsis1 {
+		0% {
+		  transform: scale(0);
+		}
+		100% {
+		  transform: scale(1);
+		}
+	  }
+	  @keyframes lds-ellipsis3 {
+		0% {
+		  transform: scale(1);
+		}
+		100% {
+		  transform: scale(0);
+		}
+	  }
+	  @keyframes lds-ellipsis2 {
+		0% {
+		  transform: translate(0, 0);
+		}
+		100% {
+		  transform: translate(19px, 0);
+		}
+	  }
+
+	  @media (max-width: 576px)
+	  {
+		  .msg_card_body{
+			  max-height: 350px;
+		  }
+		  .img_cont 
+		  {
+			  height: 30px;
+			  width: 30px;
+		  }
+		  .user_img 
+		  {
+			height: 30px;
+			width: 30px;
+		  }
+		  .user_info span {
+			font-size: 18px;
+		}
+		.img_cont_msg {
+			height: 30px;
+			width: 30px;
+		}
+		.user_img_msg {
+			height: 30px;
+			width: 30px;
+		}
+		.msg_cotainer, .msg_cotainer_send
+		{
+			font-size: 14px;
+		}
+	  }

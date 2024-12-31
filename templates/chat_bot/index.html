@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Health Care Chatbot{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid h-100">
+
+	<div class="row justify-content-center h-100">
+		<div class="col-md-8 col-sm-12 col-12 col-xl-6 chat">
+			<div class="card">
+				<div class="card-header msg_head">
+					<div class="d-flex bd-highlight">
+						<div class="img_cont">
+							<img src="{% static 'img/logo.png' %}" alt="logo" class="rounded-circle user_img">
+						</div>
+						<div class="user_info">
+							<span>Health Care Chatbot</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-body msg_card_body">
+
+					<div class="registration-form" style="display:None">
+						<form>
+					
+					
+							<button type="button" style="width: 100%" id="submit_data" name="submit_data"  onclick="data_submit();" class="btn btn-danger">Continue</button>
+						</form>
+					</div>
+					<form id="addUser" action="">
+					<div id="chat_area" class="main-content" style="display:block;">
+
+
+							<div style="width:100%;"><!-- message -->
+							<div class="d-flex justify-content-start mb-4" style="max-width:80%;min-width:80%;">
+								<div class="img_cont_msg">
+									<img src="{% static 'img/logo.png' %}" alt="Avatar" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									Hello Sir/ma'am, <br> I am a Health Care Chatbot. How can  help you.
+
+									<span class="msg_time"></span>
+								</div>
+							</div>
+							</div>
+
+							<!-- reply -->
+							<!-- <div class="d-flex justify-content-end mb-4">
+		
+								<div class="img_cont_msg">
+									<img src="{% static 'img/user.png' %}" class="rounded-circle user_img_msg">
+								</div>
+							</div> -->
+
+
+
+					</div>
+
+										</div>
+
+				<div class="card-footer">
+
+												<div class="inputContainter main-content" style="bottom:0%; display:block;">
+													<form id="addUser" action="">
+														<div>
+																<input class="inputMessage" placeholder="Type here…" type="text" value="" name="message" autocapitalize="words">
+
+																		<input class="inputMessage" value="user1" type="hidden" value="" name="chat_owner" >
+
+														</div>
+														<button id="send-button" class="sendButton" type="submit">
+																<i id="send_button_icon" class="fas fa-send" aria-hidden="true" style="display: inline-block;"></i>
+														</button>
+														</form>
+												</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block javascript %}
+<script>
+// Create Django Ajax Call
+$("form#addUser").submit(function() {
+    var chat_msgInput = $('input[name="message"]').val().trim();
+
+    var login_userInput = $('input[name="chat_owner"]').val().trim();
+
+
+    if (chat_msgInput && login_userInput) {
+        // Create Ajax Call
+        $.ajax({
+            url: '{% url "send_c" %}',
+            data: {
+                'chat_msg': chat_msgInput,
+                'login_user': login_userInput
+
+            },
+            dataType: 'json',
+            success: function (data) {
+
+                if (data.chat_data) {
+                  appendToUsrTable(data.chat_data);
+                }
+            }
+        });
+      } else {
+        alert("All fields must have a valid value.");
+    }
+    $('form#addUser').trigger("reset");
+    return false;
+});
+function appendToUsrTable(chat_data) {
+
+  $("#chat_area >").append(`
+
+  <div class="d-flex justify-content-end mb-4" >
+    <div class="msg_cotainer_send" style="max-width:80%;min-width:10%;">
+    ${chat_data.chat_msg}
+      <span class="msg_time_send"id='date-time'></span>
+    </div>
+    <div class="img_cont_msg">
+      <img src="{% static 'img/user.png' %}" class="rounded-circle user_img_msg">
+    </div>
+  </div>
+`);
+
+          $("#chat_area > ").append(`
+        <div class="d-flex justify-content-start mb-4" >
+            <div class="img_cont_msg">
+              <img src="{% static 'img/logo.png' %}" alt="Avatar" class="rounded-circle user_img_msg">
+            </div>
+            <div class="msg_cotainer">
+            ${chat_data.bot_reply1}
+
+              <span class="msg_time"><?php echo date("h:i A"); ?></span>
+            </div>
+          </div>
+    `);
+
+
+
+}
+</script>
+
+
+{% endblock javascript %}
+

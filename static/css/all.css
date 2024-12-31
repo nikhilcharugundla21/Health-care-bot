@@ -1,0 +1,110 @@
+html, body{
+			height:100%;
+		}
+		.box-body {
+		  margin: 0 auto;
+		  max-width: 800px;
+		  padding: 0 20px;
+		}
+
+		.msg {
+		  border: 2px solid #dedede;
+		  background-color: #f1f1f1;
+		  border-radius: 5px;
+		  padding: 10px;
+		  margin: 10px 0;
+		}
+
+		.darker {
+		  border-color: #ccc;
+		  background-color: #ddd;
+		  text-align: right;
+		}
+
+		.msg::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		.msg img {
+		  float: left;
+		  max-width: 60px;
+		  width: 100%;
+		  margin-right: 20px;
+		  border-radius: 50%;
+		}
+
+		.msg img.right {
+		  float: right;
+		  margin-left: 20px;
+		  margin-right:0;
+		}
+
+		.time-right {
+		  float: right;
+		  color: #aaa;
+		}
+
+		.time-left {
+		  float: left;
+		  color: #999;
+		}
+
+		.msgBox {
+		  display: inline-block;
+		  vertical-align: bottom;  /* Align the element at the bottom   */
+		}
+				/* width */
+		::-webkit-scrollbar {
+		  width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		  box-shadow: inset 0 0 5px grey; 
+		  border-radius: 10px;
+		}
+		 
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		  background: gray; 
+		  border-radius: 10px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: gray; 
+		}
+
+		.main-container
+		{
+			padding:40px 0;
+		}
+
+		.custom-card
+		{
+			width: 100%;
+			height: calc(100% - 250px); 
+			max-height:500px;
+			overflow-y: scroll;
+			border:none;
+			border-left: 1px solid rgba(0,0,0,.125);
+			border-radius: 0px;
+		}
+
+		.chtt-container
+		{
+			width: 100%;
+			background: #212529;
+			padding: 20px;
+		}
+			.chtt-container form
+			{
+				margin-block-end: 0;
+			}
+			.chtt-container .btn
+			{
+				width: 100%;
+			}
+		
